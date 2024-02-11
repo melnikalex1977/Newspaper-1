@@ -1,36 +1,29 @@
-# newspaper
+# Newspaper
 
-- Read [the guideline](https://github.com/mate-academy/py-task-guideline/blob/main/README.md) before start
+1 Read before start
+1.1 Prepare the project
+   -Fork the repo (GitHub repository)
+   -Clone the forked repo
+   git clone the-link-from-your-forked-repo
+(You can get the link by clicking the Clone or download button in your repo)
 
-In this task, you will implement search feature for your website and write tests for your project.
+   - Open the project folder in your IDE
+   - Open a terminal in the project folder
+   - Create a branch for the solution and switch on it
+   git checkout -b develop
+(You can use any other name instead of develop)
 
-1. Implement search feature for all 3 pages with content:
- - redactor
+     - If you are using PyCharm - it may propose you to automatically create venv for 
+your project and install requirements in it, but if not:
+   python -m venv venv
+   venv\Scripts\activate (on Windows)
+   source venv/bin/activate (on macOS)
+   pip install -r requirements.txt
+
+2 This project implements search functionality for all 3 content pages:
+   - redactor
    - newsapaper
    - topic
-2. Write tests for custom and for core project features (no need to test built-in functionality).
-   Use this [tutorial](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing) as helper.
-   You decide what to test and how to test (train your testing skills here).
-3. Write tests for the searching feature that you have implemented. Make sure yourself, that it works as expected.
-
-NOTE: Attach screenshots of all created pages to pull request. It's important to attach images not links to them.
-
-# Note
-Follow these steps if you need to use `crispy_forms` v2.0 with Python 3.11:
-
-1. Add `CRISPY_TEMPLATE_PACK` to `settings.py`.
-
-```python
-CRISPY_TEMPLATE_PACK="bootstrap4"
-```
-
-2. Add these apps to `INSTALLED_APPS` and install them corresponding to the `CRISPY_TEMPLATE_PACK` bootstrap version.
-
-```python
-INSTALLED APPS = [
-   ...,
-   "crispy_bootstrap4",
-   "crispy_forms",
-]
-```
+3. In this project, tests are written for the search function, for custom and for core project features. 
+Tests are written using the following resources (https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
 # Newspaper
