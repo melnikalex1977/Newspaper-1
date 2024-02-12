@@ -11,7 +11,7 @@ class Topic(models.Model):
         ordering = ["name"]
 
     def __str__(self):
-        return str(self.name)
+        return self.name
 
 
 class Redactor(AbstractUser):
@@ -36,4 +36,4 @@ class Newspaper(models.Model):
     publishers = models.ManyToManyField(Redactor, related_name="newspapers")
 
     def __str__(self):
-        return {self.title}
+        return self.title

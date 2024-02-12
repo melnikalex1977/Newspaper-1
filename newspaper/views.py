@@ -165,8 +165,8 @@ class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 @method_decorator(login_required, name='dispatch')
 class ToggleAssignToNewspaperView(View):
-    def get(self, request, pk):
-        redactor = Redactor.objects.get(id=request.user.id)
+    def post(self, request, pk):
+        redactor = Redactor.objects.post(id=request.user.id)
         if Newspaper.objects.filter(id=pk, redactors=redactor).exists():
             redactor.newspapers.remove(pk)
         else:
