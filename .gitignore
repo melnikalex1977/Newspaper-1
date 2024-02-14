@@ -1,10 +1,11 @@
 .idea/
 .vscode/
 *.iml
-.env
+newspaper_service/.env.sample
+.env.sample
 .DS_Store
 venv/
 .pytest_cache/
 **__pycache__/
 *.pyc
-app/db.sqlite3
+db.sqlite3
