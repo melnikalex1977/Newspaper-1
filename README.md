@@ -26,6 +26,5 @@ your project and install requirements in it, but if not:
    - topic
 3. In this project, tests are written for the search function, for custom and for core project features. 
 Tests are written using the following resources (https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
-# Newspaper
-# Newspapers1
-# Newspapers
+
+# Newapaper
