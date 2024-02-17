@@ -10,7 +10,6 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-{#<div class="page-header section-height-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/curved-images/curved-11.jpg')">#}
 <div>
   <h1>
     Topic List
@@ -54,5 +53,10 @@
   {% else %}
       <p>There are no topic in the service.</p>
   {% endif %}
+  <div class="col-sm-5 mt-1">
+    {% block search %}
+      {% include "includes/search.html" %}
+    {% endblock %}
+  </div>
 </div>
 {% endblock %}

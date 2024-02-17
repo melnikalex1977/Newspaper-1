@@ -17,27 +17,6 @@ from .forms import (RedactorCreationForm,
                     )
 
 
-@login_required
-def index(request):
-    """View function for the home page of the site."""
-
-    num_redactors = Redactor.objects.count()
-    num_newspapers = Newspaper.objects.count()
-    num_topics = Topic.objects.count()
-
-    num_visits = request.session.get("num_visits", 0)
-    request.session["num_visits"] = num_visits + 1
-
-    context = {
-        "num_redactors": num_redactors,
-        "num_newspapers": num_newspapers,
-        "num_topics": num_topics,
-        "num_visits": num_visits + 1,
-    }
-
-    return render(request, "newspaper/index.html", context=context)
-
-
 class TopicListView(LoginRequiredMixin, generic.ListView):
     model = Topic
     context_object_name = "topic_list"
@@ -175,3 +154,22 @@ class ToggleAssignToNewspaperView(View):
             reverse_lazy
             ("newspaper:newspaper-detail", args=[pk])
         )
+
+
+class Index(View):
+    def get(self, request):
+        num_redactors = Redactor.objects.count()
+        num_newspapers = Newspaper.objects.count()
+        num_topics = Topic.objects.count()
+
+        num_visits = request.session.get("num_visits", 0)
+        request.session["num_visits"] = num_visits + 1
+
+        context = {
+            "num_redactors": num_redactors,
+            "num_newspapers": num_newspapers,
+            "num_topics": num_topics,
+            "num_visits": num_visits + 1,
+        }
+
+        return render(request, "newspaper/index.html", context=context)

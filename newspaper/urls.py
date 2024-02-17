@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (
-    index,
+    Index,
     NewspaperListView,
     NewspaperDetailView,
     NewspaperCreateView,
@@ -20,7 +20,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path("", index, name="index"),
+    path("", Index.as_view(), name="index"),
     path(
         "topics/",
         TopicListView.as_view(),

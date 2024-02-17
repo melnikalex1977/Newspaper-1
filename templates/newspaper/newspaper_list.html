@@ -32,5 +32,9 @@
   {% else %}
     <p>There are no newspapers in newspaper</p>
   {% endif %}
-
+  <div class="col-sm-5 mt-1">
+    {% block search %}
+      {% include "includes/search.html" %}
+    {% endblock %}
+  </div>
 {% endblock %}
