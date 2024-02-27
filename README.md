@@ -1,5 +1,8 @@
 # Newspaper
+Django project for managing newspaper
 
+project develoyed to Render (https://github.com/melnikalex1977/Newspaper-1)
+ 
 1 Read before start
 1.1 Prepare the project
    -Fork the repo (GitHub repository)
@@ -19,6 +22,7 @@ your project and install requirements in it, but if not:
    venv\Scripts\activate (on Windows)
    source venv/bin/activate (on macOS)
    pip install -r requirements.txt
+   python manage.py runserver
 
 2 This project implements search functionality for all 3 content pages:
    - redactor
@@ -26,5 +30,7 @@ your project and install requirements in it, but if not:
    - topic
 3. In this project, tests are written for the search function, for custom and for core project features. 
 Tests are written using the following resources (https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
-# Newspaper
-# Newspaper-1
+
+![Website Interface](demo.png)
+
+
