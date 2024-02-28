@@ -18,7 +18,6 @@ ALLOWED_HOSTS = ["127.0.0.1", "https://newspaper-1.onrender.com", "localhost",]
 
 INTERNAL_IPS = [
     "127.0.0.1",
-    "localhost",
 
 ]
 
