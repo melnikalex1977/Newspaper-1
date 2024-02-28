@@ -11,10 +11,6 @@ load_dotenv()
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG")
 
-# DEBUG = True
-# SECRET_KEY = (
-#     "django-insecure-8ovil3xu6=eaoqd#-#&ricv159p0pypoh5_lgm*)-dfcjqe=yc"
-# )
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://newspaper-f1i9.onrender.com"]
@@ -78,29 +74,12 @@ DATABASES = {
     'default': dj_database_url.config(
         default='postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv'
     )
-    # ),
-    # 'sqlite': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
 }
-
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv'
-#     )
-# }
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-#     }
-# }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES["default"].update(db_from_env)
-DATABASES_URL = "postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv"
-# DATABASES_URL = os.getenv("DATABASES")
+#DATABASES_URL = "postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv"
+DATABASES_URL = os.getenv("DATABASES")
 
 AUTH_PASSWORD_VALIDATORS = [
     {
