@@ -17,7 +17,7 @@ DEBUG = os.getenv("DEBUG")
 # )
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://newspaper-f1i9.onrender.com"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
@@ -99,7 +99,7 @@ DATABASES = {
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES["default"].update(db_from_env)
-#DATABASES_URL = "postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv"
+DATABASES_URL = "postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv"
 # DATABASES_URL = os.getenv("DATABASES")
 
 AUTH_PASSWORD_VALIDATORS = [
