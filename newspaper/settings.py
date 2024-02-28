@@ -14,10 +14,12 @@ DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://newspaper-1.onrender.com"]
-ALLOWED_HOSTS = ["127.0.0.1", "https://newspaper-1.onrender.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "https://newspaper-1.onrender.com", "localhost",]
 
 INTERNAL_IPS = [
     "127.0.0.1",
+    "localhost",
+
 ]
 
 INSTALLED_APPS = [
