@@ -10,16 +10,11 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 # DEBUG = os.getenv("DEBUG")
-
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-DEBUG = False
-
+DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://newspaper-1.onrender.com"]
-ALLOWED_HOSTS = ["127.0.0.1", "https://newspaper-1.onrender.com", "localhost",]
+ALLOWED_HOSTS = ["127.0.0.1", "http://newspaper-1.onrender.com", "localhost",]
 
 INTERNAL_IPS = [
     "127.0.0.1",

@@ -8,18 +8,13 @@ load_dotenv(dotenv_path=env_path)
 
 load_dotenv()
 
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-DEBUG = False
-
 SECRET_KEY = os.getenv("SECRET_KEY")
 # DEBUG = os.getenv("DEBUG")
-
+DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #ALLOWED_HOSTS = ["127.0.0.1", "localhost", "https://newspaper-1.onrender.com"]
-ALLOWED_HOSTS = ["127.0.0.1", "https://newspaper-1.onrender.com", "localhost",]
+ALLOWED_HOSTS = ["127.0.0.1", "http://newspaper-1.onrender.com", "localhost",]
 
 INTERNAL_IPS = [
     "127.0.0.1",
@@ -52,6 +47,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "newspaper_service.urls"
+
+
 
 TEMPLATES = [
     {
