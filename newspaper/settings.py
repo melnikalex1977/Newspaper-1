@@ -76,7 +76,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 WSGI_APPLICATION = "newspaper_service.wsgi.application"
 
 
-DATABASE_URL = {
+DATABASES = {
     'default': dj_database_url.config(
         default='postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv'
     )
