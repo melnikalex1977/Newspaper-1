@@ -9,11 +9,11 @@ load_dotenv(dotenv_path=env_path)
 load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-# DEBUG = os.getenv("DEBUG")
-DEBUG = True
+DEBUG = os.getenv("DEBUG") != "False"
+#DEBUG = True
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "http://newspaper-1.onrender.com"]
 #ALLOWED_HOSTS = ["127.0.0.1", "http://newspaper-1.onrender.com", "localhost"]
 
 INTERNAL_IPS = [
