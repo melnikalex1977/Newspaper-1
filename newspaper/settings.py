@@ -73,8 +73,8 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-WSGI_APPLICATION = "newspaper_service.wsgi.application"
-
+#WSGI_APPLICATION = "newspaper_service.wsgi.application"
+WSGI_APPLICATION = "newspaper.wsgi.application"
 
 DATABASES = {
     'default': dj_database_url.config(
