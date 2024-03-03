@@ -1,7 +1,8 @@
 # Newspaper
 Django project for managing newspaper
 
-project develoyed to Render (http://github.com/melnikalex1977/Newspaper-1)
+project develoyed to Render (https://github.com/melnikalex1977/Newspaper-1)
+
  
 1 Read before start
 1.1 Prepare the project
