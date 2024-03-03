@@ -9,9 +9,9 @@ load_dotenv(dotenv_path=env_path)
 load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = os.getenv("DEBUG")
+#DEBUG = os.getenv("DEBUG")
 
-# DEBUG = True
+DEBUG = True
 # SECRET_KEY = (
 #     "django-insecure-8ovil3xu6=eaoqd#-#&ricv159p0pypoh5_lgm*)-dfcjqe=yc"
 # )
