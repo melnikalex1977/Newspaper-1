@@ -23,8 +23,6 @@ ALLOWED_HOSTS = ["127.0.0.1"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
-    "localhost",
-    "https://newspaper-1.onrender.com",
 ]
 
 INSTALLED_APPS = [
