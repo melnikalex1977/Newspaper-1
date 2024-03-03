@@ -19,7 +19,7 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "") !="False"
 # )
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "newspaper-1.onrender.com"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
