@@ -34,4 +34,7 @@ Tests are written using the following resources (https://developer.mozilla.org/e
 
 ![Website Interface](demo.png)
 
+to log into my system you must use:
+   login: admin
+   password: admin12345
 
