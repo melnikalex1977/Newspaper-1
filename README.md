@@ -38,3 +38,7 @@ to log into my system you must use:
    login: admin
    password: admin12345
 
+this login and password of the test user:
+   login: user
+   password: user12345
+
