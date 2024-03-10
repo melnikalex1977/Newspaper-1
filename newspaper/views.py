@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+# from django.contrib.auth import get_user_model
 from django.utils.decorators import method_decorator
 from django.views import View
 
@@ -173,3 +173,6 @@ class Index(View):
         }
 
         return render(request, "newspaper/index.html", context=context)
+
+# User = get_user_model()
+# user = User.objects.create_user(username='user', password='user12345')

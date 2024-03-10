@@ -8,8 +8,10 @@ load_dotenv(dotenv_path=env_path)
 
 load_dotenv()
 
-SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = os.getenv("DEBUG")
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
+
+# SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.environ.get("DJANGO_DEBUG", "") !="False"
 
 # DEBUG = True
 # SECRET_KEY = (
@@ -17,7 +19,7 @@ DEBUG = os.getenv("DEBUG")
 # )
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["127.0.0.1", "newspaper-1.onrender.com"]
 
 INTERNAL_IPS = [
     "127.0.0.1",
@@ -77,12 +79,11 @@ WSGI_APPLICATION = "newspaper_service.wsgi.application"
 DATABASES = {
     'default': dj_database_url.config(
         default='postgres://ovnreimv:N1z3qQnbt2fVPJwoNrLSP8BHvn27m_Lu@snuffleupagus.db.elephantsql.com/ovnreimv'
-    )
-    # ),
-    # 'sqlite': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
+    ),
+    'sqlite': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 # DATABASES = {
